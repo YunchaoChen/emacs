@@ -6,6 +6,7 @@
  '(inhibit-startup-screen t)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil)
  '(global-linum-mode t))
 
 ;; Set auto save backup file to ~/.emacs_bak
