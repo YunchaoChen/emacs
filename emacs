@@ -7,6 +7,7 @@
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(menu-bar-mode nil)
+ '(scroll-bar-mode nil)
  '(global-linum-mode t))
 
 ;; Set auto save backup file to ~/.emacs_bak
@@ -70,3 +71,12 @@
 (require 'showtip)
 (require 'sdcv)
 (global-set-key (kbd "C-c d") 'sdcv-search-pointer+)
+
+;; full screen
+(defun emacs-fullscreen ()
+	   (interactive)
+	   (x-send-client-message
+			nil 0 nil "_NET_WM_STATE" 32
+			'(2 "_NET_WM_STATE_FULLSCREEN" 0)))
+
+(emacs-fullscreen)
