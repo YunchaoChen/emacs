@@ -57,7 +57,7 @@
 (yas-global-mode 1)
 
 ;; Add the lastest org-mode support.
-(setq load-path (cons "/opt/emacs/emcas.d/org-8.2.1/lisp" load-path))
+(setq load-path (cons "/opt/emacs/emacs.d/org-8.2.1/lisp" load-path))
 (setq load-path (cons "/opt/emacs/emacs.d/org-8.2.1/contrib/lisp" load-path))
 (require 'org-install)
 (require 'org-publish)
