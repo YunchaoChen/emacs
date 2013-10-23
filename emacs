@@ -3,12 +3,23 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t)
- '(show-paren-mode t)
- '(tool-bar-mode nil)
+ '(column-number-mode t)
+ '(display-time-mode t)
  '(menu-bar-mode nil)
+ '(display-time-24hr-format t)
+ '(global-linum-mode t)
+ '(inhibit-startup-screen t)
  '(scroll-bar-mode nil)
- '(global-linum-mode t))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
+
+ ;; font
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "Grey15" :foreground "Grey" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
 
 ;; Set auto save backup file to ~/.emacs_bak
 (setq backup-directory-alist (quote (("." . "/opt/emacs_bak"))))
