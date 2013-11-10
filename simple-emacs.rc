@@ -1,0 +1,26 @@
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(menu-bar-mode nil)
+ '(global-linum-mode t)
+ '(inhibit-startup-screen t)
+ '(scroll-bar-mode nil)
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
+
+;; Auto indent when insert a new line
+(global-set-key (kbd "RET") 'newline-and-indent)
+(setq tab-width 4)
+(setq default-tab-width 4)
+(setq indent-tabs-mode t)
+(setq c-basic-offset 4)
+
+;; Open file with read only mode
+(defun make-some-files-read-only ()
+  "when file opened is of a certain mode, make it read only"
+    (when (memq major-mode '(c-mode c++-mode tcl-mode text-mode python-mode java-mode html-mode js-mode ))
+	    (toggle-read-only 1)))
+
+(add-hook 'find-file-hooks 'make-some-files-read-only)
